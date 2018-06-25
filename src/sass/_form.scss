@@ -1,0 +1,88 @@
+@import './_func.scss';
+.mint-radio-core {
+  width: pxToRem(28px) !important;
+  height: pxToRem(28px) !important;
+  &::after {
+    width: pxToRem(15px) !important;
+    height: pxToRem(15px) !important;
+    top: 0 !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    margin: auto;
+  }
+}
+
+.mint-radio-label {
+  margin-left: pxToRem(20px) !important;
+}
+
+.radio-group {
+  overflow: hidden;
+  .mint-cell {
+    float: left !important;
+    width: pxToRem(200px) !important;
+    background-image: none !important;
+  }
+}
+
+.invoice {
+  .mint-radio-label {
+    font-size: pxToRem(28px) !important;
+  }
+}
+
+.radio-pay {
+  .mint-cell {
+    float: left !important;
+    background-image: none !important;
+  }
+  .mint-radio-label {
+    font-size: pxToRem(25px) !important;
+  }
+}
+
+.radio-controls {
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  input[type="radio"] {
+    display: none;
+    position: absolute;
+    width: pxToRem(25px);
+    height: pxToRem(25px);
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+  }
+  .radio-core {
+    width: pxToRem(25px);
+    height: pxToRem(25px);
+    display: inline-block;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    position: relative;
+    vertical-align: middle;
+  }
+  input[type="radio"]:checked+.radio-core {
+    background-color: #26a2ff;
+    border-color: #26a2ff;
+    &:after {
+      content: " ";
+      background-color: #fff;
+      border-radius: 100%;
+      width: pxToRem(15px);
+      height: pxToRem(15px);
+      display: inline-block;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      position: absolute;
+    }
+  }
+}

@@ -1,0 +1,102 @@
+@charset 'utf-8';
+$base-font-size: 75px; //design iphone6: 375px * 2 / 10 = 75px; --design
+// $base-font-size: 32px; //design iphone3gs: 320px / 10 = 32px
+// $base-font-size: 64px; //design iphone4/5: 320px * 2 / 10 = 64px
+// $base-font-size: 124.2px; //design iphone6: 414px * 3 / 10 = 124.2px;
+@function pxToRem($px) {
+  @return $px / $base-font-size * 1rem;
+}
+
+@mixin pxToPx($name, $px) {
+  #{$name}: round($px / 2) * 1px;
+  [data-dpr="2"] & {
+    #{$name}: $px * 1px;
+  } // for mx3
+  [data-dpr="2.5"] & {
+    #{$name}: round($px * 2.5 / 2) * 1px; //因为设计稿是2倍稿，所以要除以2
+  } // for xiaomi note
+  [data-dpr="2.75"] & {
+    #{$name}: round($px * 2.75 / 2) * 1px;
+  }
+  [data-dpr="3"] & {
+    #{$name}: round($px * 3 / 2) * 1px;
+  } // for sumsang note4
+  [data-dpr="4"] & {
+    #{$name}: $px * 2px;
+  }
+}
+
+@mixin bg {
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#40c3fc+0,1e82ec+100 */
+  background: #40c3fc;
+  /* Old browsers */
+  background: -moz-linear-gradient(left, #40c3fc 0%, #1e82ec 100%);
+  /* FF3.6-15 */
+  background: -webkit-linear-gradient(left, #40c3fc 0%, #1e82ec 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to right, #40c3fc 0%, #1e82ec 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40c3fc', endColorstr='#1e82ec', GradientType=1);
+  /* IE6-9 */
+}
+
+@mixin clearfix {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin ellipsis {
+  white-space: nowrap;
+  word-wrap: normal;
+  overflow: hidden;
+  -o-text-overflow: ellipsis;
+  /* Opera 9-10.6 */
+  text-overflow: ellipsis;
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  max-width: 100%; // _width: 100%;
+  text-align: left;
+  /* Chrome 21+ bug */
+}
+
+//border 
+@mixin border($pos, $color) {
+  content: "";
+  position: absolute;
+  transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  @if $pos=='top' {
+    #{$pos}: 0px;
+    left: 0px;
+    right: 0px;
+    border-#{$pos}: 1px solid $color;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+  }
+  @else if $pos=='bottom' {
+    #{$pos}: 0px;
+    left: 0px;
+    right: 0px;
+    border-#{$pos}: 1px solid $color;
+    transform: scaleY(.5);
+    -webkit-transform: scaleY(.5);
+  }
+  @else {
+    top: 0px;
+    bottom: 0px;
+    #{$pos}: 0px;
+    border-#{$pos}: 1px solid $color;
+    transform: scaleX(.5);
+    -webkit-transform: scaleX(.5);
+  }
+}

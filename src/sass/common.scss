@@ -1,0 +1,349 @@
+@import './_func.scss';
+@import "./_reset.scss";
+@import "./_form.scss";
+@import "./_icon.scss";
+@import "./_icalendar.scss";
+@import "./_larea.scss";
+body {
+  background-color: #eeeeee;
+  font-family: Microsoft YaHei, tahoma, arial;
+}
+
+html,
+body,
+#app {
+  height: 100%;
+  width: 100%;
+  font-size: pxToRem(25px);
+}
+
+#mainContent {
+  //max-width: 920px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  user-select: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.load {
+  width: pxToRem(100px);
+  height: pxToRem(100px);
+  z-index: 9999;
+  .mint-spinner-snake {
+    height: pxToRem(50px) !important;
+    width: pxToRem(50px) !important;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+.mintui-back {
+  font-size: pxToRem(27px) !important;
+}
+
+.mint-button-icon {
+  vertical-align: baseline !important;
+  display: inline;
+}
+
+.mint-header-title {
+  font-weight: bold !important;
+  height: pxToRem(50px) !important;
+  line-height: pxToRem(50px) !important;
+}
+
+.mint-header-button {
+  height: pxToRem(50px) !important;
+  line-height: pxToRem(50px) !important;
+}
+
+.mint-button {
+  height: auto !important;
+}
+
+.mint-cell-title {
+  width: pxToRem(255px) !important;
+}
+
+.mint-cell-text {
+  font-size: pxToRem(30px);
+}
+
+.mint-cell-wrapper {
+  font-size: pxToRem(35px) !important;
+  padding: 0 pxToRem(10px) !important;
+  background-image: none !important;
+}
+
+.mintui-field-error {
+  font-size: pxToRem(30px) !important;
+}
+
+.mint-checkbox-core {
+  width: pxToRem(38px) !important;
+  height: pxToRem(38px) !important;
+  font-size: pxToRem(25px) !important;
+}
+
+.mint-field-core {
+  font-size: pxToRem(30px) !important;
+}
+
+.mint-checkbox-label {
+  font-size: pxToRem(25px) !important;
+}
+
+.mint-checkbox-core {
+  &::after {
+    top: pxToRem(6px) !important;
+    left: pxToRem(10px) !important;
+    width: pxToRem(15px) !important;
+    height: pxToRem(15px) !important;
+  }
+}
+
+.mint-toast {
+  padding: pxToRem(20px) !important;
+  border-radius: pxToRem(35px) !important;
+}
+
+.mint-toast-text {
+  font-size: pxToRem(40px) !important;
+}
+
+.mint-swipe-indicator {
+  width: pxToRem(20px) !important;
+  height: pxToRem(20px) !important;
+  margin: 0 pxToRem(5px) !important;
+}
+
+.is-active {
+  background: #0488f9 !important;
+  opacity: 1 !important;
+}
+
+.mint-popup-bottom {
+  width: 100% !important;
+  height: pxToRem(300px) !important;
+  .picker {
+    height: pxToRem(300px) !important;
+  }
+  .picker-items {
+    height: 100% !important;
+  }
+}
+
+.picker-item {
+  height: pxToRem(36px) !important;
+  font-size: pxToRem(26px) !important;
+  line-height: pxToRem(36px) !important;
+}
+
+.geetest_radar,
+.geetest_logo,
+.geetest_success_box {
+  width: pxToRem(35px) !important;
+  height: pxToRem(35px) !important;
+}
+
+.geetest_logo,
+.geetest_success_logo {
+  display: none !important;
+}
+
+.geetest_radar_tip,
+.geetest_success_radar_tip {
+  font-size: pxToRem(35px) !important;
+}
+
+.geetest_wind {
+  height: pxToRem(85px) !important;
+}
+
+.geetest_radar,
+.geetest_radar_tip,
+.geetest_logo,
+.geetest_success_radar_tip,
+.geetest_success_box,
+.geetest_success_logo {
+  top: 0 !important;
+  bottom: 0 !important;
+  margin: auto !important;
+}
+
+.geetest_copyright {
+  display: none !important;
+}
+
+.geetest_popup_box {
+  width: 90% !important;
+}
+
+.geetest_success_show,
+.geetest_success_logo {
+  width: pxToRem(35px) !important;
+  height: pxToRem(35px) !important;
+}
+
+.geetest_success_correct,
+.geetest_success_icon {
+  width: pxToRem(20px) !important;
+  height: pxToRem(20px) !important;
+  top: 0 !important;
+  bottom: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+}
+
+.geetest_success_radar_tip_content {
+  margin-left: pxToRem(20px) !important;
+}
+
+.mint-msgbox-title,
+.mint-msgbox-btn {
+  font-size: pxToRem(30px) !important;
+}
+
+.mint-msgbox {
+  font-size: pxToRem(32px) !important;
+}
+
+.mint-msgbox-header {
+  padding: pxToRem(15px) 0 0 !important;
+}
+
+.mint-msgbox-message {
+  line-height: pxToRem(35px) !important;
+}
+
+.mint-msgbox-content {
+  padding: pxToRem(10px) pxToRem(20px) pxToRem(15px) !important;
+}
+
+.mint-msgbox-btns {
+  height: pxToRem(55px) !important;
+  line-height: pxToRem(35px) !important;
+}
+
+.password-text {
+  .mint-cell-text {
+    letter-spacing: pxToRem(23.5px);
+    position: relative;
+    &::after {
+      content: ":";
+      position: absolute;
+      right: pxToRem(-6px);
+      bottom: pxToRem(2px);
+      margin: auto;
+    }
+  }
+}
+
+.mint-tab-item-label {
+  font-size: pxToRem(30px) !important;
+  color: #000;
+  font-family: Microsoft YaHei, tahoma, arial;
+}
+
+.mint-tab-item-icon {
+  width: pxToRem(24px) !important;
+  height: pxToRem(24px) !important;
+  margin: 0 auto pxToRem(5px) !important;
+}
+
+.mint-tab-item {
+  padding: pxToRem(25px) 0 !important;
+}
+
+.mint-msgbox-btn {
+  line-height: pxToRem(55px) !important;
+}
+
+img[lazy=loading] {
+  width: pxToRem(50px) !important;
+  height: pxToRem(50px) !important;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.mint-cell {
+  overflow: hidden !important;
+}
+
+.mint-cell-allow-right {
+  &::after {
+    width: pxToRem(15px) !important;
+    height: pxToRem(15px) !important;
+  }
+}
+
+.mint-cell-title {
+  .mint-cell-text {
+    font-size: pxToRem(27px) !important;
+  }
+}
+
+.mint-cell-value {
+  padding-right: pxToRem(5px) !important;
+}
+
+.mint-popup {
+  width: 100% !important;
+  top: auto !important;
+  bottom: 0 !important;
+}
+
+.mint-datetime-action {
+  font-size: pxToRem(30px) !important;
+  line-height: auto !important;
+}
+
+.picker-toolbar {
+  height: pxToRem(50px) !important;
+  line-height: pxToRem(50px) !important;
+}
+
+.mint-swipe-indicators {
+  transform: none !important;
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  text-align: center !important;
+}
+
+.swiper-pagination-bullet {
+  width: pxToRem(20px) !important;
+  height: pxToRem(20px) !important;
+  margin-left: pxToRem(10px) !important;
+}
+
+.swiper-pagination {
+  left: 0 !important;
+  right: 0 !important;
+  margin: auto !important;
+  bottom: pxToRem(10px) !important;
+}
+
+.is-placebottom {
+  bottom: pxToRem(150px) !important;
+}
+
+.mint-indicator-mask {
+  z-index: 99999 !important;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>药居士移动版-中国最大的健康网上药房</title>
+  <style type="text/css">
+    *,
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .iframe {
+      border: none;
+      overflow: hidden;
+      width: 820px;
+      height: 100%;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+    }
+
+    .box {
+      width: 820px;
+      margin: 0 auto;
+    }
+
+    .iframe::-webkit-scrollbar {
+      width: 0px;
+      height: 0px;
+      background-color: #F5F5F5;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <iframe id='ifr' class="iframe" src="/index.html?type=1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"
+      allowtransparency="yes"></iframe>
+  </div>
+</body>
+
+</html>
+<script type="text/javascript">
+  window.onload = function () {
+    var clientWidth = document.documentElement.clientWidth;
+    if (clientWidth < 900) {
+      window.location.href = "/index.html";
+    }
+    window.onresize = function () {
+      if (document.documentElement.clientWidth < 900) {
+        window.location.href = "/index.html";
+      }
+    }
+  }
+
+  var iframe = document.getElementById('ifr');
+  if (iframe.attachEvent) {
+    iframe.attachEvent("onload", function () {
+      iframe.height = iframe.contentWindow.document.documentElement.scrollHeight;
+    });
+  } else {
+    iframe.onload = function () {
+      iframe.style.height = (iframe.contentDocument.body.scrollHeight * 2.05) + 'px';
+    };
+  }
+
+</script>

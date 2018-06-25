@@ -1,0 +1,137 @@
+@import './_func.scss';
+.icon {
+  width: pxToRem(20px);
+  height: pxToRem(20px);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: inline-block;
+}
+
+.icon-edit {
+  background-image: url('../assets/edit.png');
+}
+
+.icon-delete {
+  background-image: url('../assets/delete.png');
+}
+
+.icon-delivery {
+  background-image: url('../assets/delivery.png');
+}
+
+.icon-wait-pay {
+  background-image: url('../assets/wait-pay.png');
+}
+
+.icon-wait-send {
+  background-image: url('../assets/wait-send.png');
+}
+
+.icon-evaluate {
+  background-image: url("../assets/comments.png");
+}
+
+.icon-collection {
+  background-image: url('../assets/collection.png');
+}
+
+.icon-coupon {
+  background-image: url('../assets/coupon.png');
+}
+
+.icon-exchange {
+  background-image: url('../assets/exchange.png');
+}
+
+.icon-question-answering {
+  background-image: url('../assets/question_answering.png');
+}
+
+.icon-consultation {
+  background-image: url('../assets/consultation.png');
+}
+
+.icon-address {
+  background-image: url('../assets/address.png');
+}
+
+.icon-common-problem {
+  background-image: url('../assets/common-problem.png');
+}
+
+.icon-collection-color {
+  background-image: url('../assets/collection-color.png');
+}
+
+.icon-consultation-color {
+  background-image: url('../assets/consultation-color.png');
+}
+
+.icon-exchange-color {
+  background-image: url('../assets/exchange-color.png');
+}
+
+.icon-feedback {
+  background-image: url('../assets/feedback.png');
+}
+
+.icon-hongbao {
+  background-image: url('../assets/hongbao.png');
+}
+
+.icon-prizes-color {
+  background-image: url('../assets/prizes-color.png');
+}
+
+.icon-detail-down {
+  background-image: url('../assets/detail-down.png');
+}
+
+.icon-detail-up {
+  background-image: url('../assets/detail-up.png');
+}
+
+.icon-star-score-on {
+  background-image: url('../assets/icon-star-score-on.png');
+}
+
+.icon-star-score-off {
+  background-image: url('../assets/icon-star-score-off.png');
+}
+
+.icon-position {
+  background-image: url('../assets/position.png');
+}
+
+.icon-right {
+  background-image: url('../assets/right.png');
+}
+
+.icon-close {
+  background-image: url('../assets/close.png');
+}
+
+.icon-eye-close {
+  background-image: url('../assets/closeEye.png');
+}
+
+.icon-eye-open {
+  background-image: url('../assets/openEye.png');
+}
+
+.icon-success {
+  background-image: url('../assets/success.png');
+}
+
+.icon-wait {
+  background-image: url('../assets/wait.png');
+}
+
+.icon-fail {
+  background-image: url('../assets/fail.png');
+}
+
+.icon-down {
+  background-image: url('../assets/down.png');
+}
