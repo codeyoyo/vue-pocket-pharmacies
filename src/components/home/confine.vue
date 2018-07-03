@@ -1,9 +1,6 @@
 <template>
     <div class="confine" v-show="showSpike">
         <div class="confine-title">
-          <!-- <div class="skillt-l fl">
-            <img src="http://res.360kad.com/theme/mobile/img/m_index/skill-logo1.png" alt="" onerror="imgError(this);"/>
-          </div> -->
           <div class="skillt-m fl" id="skill_timeout">
             {{model.name}}
           </div>
@@ -15,7 +12,6 @@
             <a v-for="(item,index) in model.promotionProductInfos" class="confine-item" :key="index" :href="'#/productDetil/'+item.productCode+'/'+item.merchantBasicId">
                 <div class="skill-img">
                     <img :src="item.img" />
-                    <!-- <span class="skill-promotion">{{item.discount}}折</span> -->
                 </div>
                 <div class="skill-productName">
                   {{item.productName}}
@@ -24,7 +20,7 @@
                     ￥<span v-text="item.promotionPrice"></span>
                 </div>
                 <div class="skill-marprice">
-                  ￥{{item.sellingPrice}}
+                    ￥{{item.sellingPrice}}
                 </div>
             </a>
         </product-list>

@@ -80,7 +80,62 @@ const recomendProduct = (pageIndex) => {
  * 获取秒杀产品信息
  */
 const spikeProduct = () => {
-  return ajax.getData('SpikeProduct', url, false);
+  let now=new Date();
+  let dateStr=now.getFullYear()+"-"+(now.getMonth()+1)+"-"+now.getDate();
+  let data = {
+    code:200,
+    model:{
+      name:"限时秒杀",
+      world:"21点场",
+      startTime:+" 21:00:00",
+      endTime:dateStr+" 22:00:00",
+      promotionProductInfos:[
+        {
+          img:"http://image.360kad.com/group2/M00/17/38/CgAgFVoFfACADm3PAAF6hOmoMEE368.jpg_180x180.jpg",
+          productName:"恩惠 医用棉签 12cm*50支",
+          promotionPrice:"1",
+          sellingPrice:"2.5",
+          productCode:"0",
+          merchantBasicId:"0"
+        },
+        {
+          img:"http://image.360kad.com/group1/M00/B9/A2/CgAgEFmNWqyAA9hCAAHHTresBkQ829.jpg_180x180.jpg",
+          productName:"强爱 创口贴 超弹防水型 10贴",
+          promotionPrice:"1",
+          sellingPrice:"9.9",
+          productCode:"0",
+          merchantBasicId:"0"
+        },
+        {
+          img:"http://image.360kad.com/group1/M00/1F/E0/CgAgEFbT4LWAZaLFAAGjCQI3hrg639.jpg_180x180.jpg",
+          productName:"恒健 碘酊 20ml",
+          promotionPrice:"1",
+          sellingPrice:"2.5",
+          productCode:"0",
+          merchantBasicId:"0"
+        },
+        {
+          img:"http://image.360kad.com/group1/M00/AC/36/CgAgEFlB-EWAd3oZAAGY-_1V0fY632.jpg_180x180.jpg",
+          productName:"韩纪 玻尿酸深度保湿蚕丝隐形面贴膜 1张",
+          promotionPrice:"1",
+          sellingPrice:"2.5",
+          productCode:"0",
+          merchantBasicId:"0"
+        },
+        {
+          img:"http://image.360kad.com/group1/M00/49/4C/CgAgEVfD3zCAesNDAAG5r5CaWRA188.jpg_180x180.jpg",
+          productName:"龙虎 氟轻松维B6乳膏 30g/支",
+          promotionPrice:"1",
+          sellingPrice:"2.5",
+          productCode:"0",
+          merchantBasicId:"0"
+        }
+      ]
+    },
+    message:""
+  };
+  return fakeRequest(data);
+  //return ajax.getData('SpikeProduct', url, false);
 }
 
 /**

@@ -81,7 +81,6 @@ export default {
     height: pxToRem(40px);
     line-height: pxToRem(40px);
     padding: pxToRem(5px);
-    margin-top: pxToRem(5px);
     user-select: none;
   }
   .search-input {
@@ -128,7 +127,6 @@ export default {
     line-height: pxToRem(40px);
     padding: pxToRem(5px);
     text-decoration: none;
-    margin-top: pxToRem(5px);
     img {
       height: 100%;
     }

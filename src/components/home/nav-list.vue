@@ -42,6 +42,7 @@ export default {
 <style lang="scss" scoped>
 @import "../../sass/_func.scss";
 .nav-box {
+  margin-top: pxToRem(30px);
   background: white;
   overflow: hidden;
   padding-bottom: pxToRem(10px);
