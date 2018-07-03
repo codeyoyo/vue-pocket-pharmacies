@@ -96,8 +96,8 @@
     "not ie <= 8"
   ],
   "apidoc": {
-    "description": "YJS接口文档",
-    "title": "YJS接口文档",
+    "description": "接口文档",
+    "title": "接口文档",
     "url": "localhost"
   }
 }

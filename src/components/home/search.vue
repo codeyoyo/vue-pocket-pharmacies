@@ -1,7 +1,7 @@
 <template>
   <div id="search">
     <div class="search-box" :class="searchClass">
-      <div class="name">药居士</div>
+      <div class="name">药道士</div>
       <div class="search-input">
         <i class="mintui mintui-search"></i>
         <input type="text" v-model="searchValue" @click="goSearch()" readonly />

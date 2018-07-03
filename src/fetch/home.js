@@ -1,11 +1,37 @@
 import ajax from '@/func/fetch';
-let url = "http://120.78.69.215:1100/api/v1/";
-
+import fakeRequest from "@/func/fakeRequest";
+import requestFunc from '../func/fakeRequest';
 /**
  * 轮播图
  */
 const carousel = () => {
-  return ajax.getData('Carousel', url, false);
+  return fakeRequest([
+    {
+      imageUrl:"https://image.jianke.com/article/201806/20180621093317114.jpg",
+      actionType:20,
+      productId:0,
+      merchantBasicId:0
+    },
+    {
+      imageUrl:"https://image.jianke.com/article/201806/20180626093742771.jpg",
+      actionType:20,
+      productId:0,
+      merchantBasicId:0
+    },
+    {
+      imageUrl:"https://image.jianke.com/article/201806/20180621181124155.jpg",
+      actionType:20,
+      productId:0,
+      merchantBasicId:0
+    },
+    {
+      imageUrl:"https://image.jianke.com/article/201806/20180610213138629.jpg",
+      actionType:20,
+      productId:0,
+      merchantBasicId:0
+    }
+  ]);
+  //return ajax.getData('Carousel', url, false);
 }
 
 /**
@@ -83,7 +109,49 @@ const hotSearchKey = () => {
  * 首页按钮
  */
 const homeNavBoxes = () => {
-  return ajax.getData('HomeNavBoxes', url, false);
+  return requestFunc([
+    {
+      iconText:"全部分类",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/all.png",
+      actionContent:""
+    },
+    {
+      iconText:"对症找药",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/findacure.png",
+      actionContent:""
+    },
+    {
+      iconText:"男性",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/man.png",
+      actionContent:""
+    },
+    {
+      iconText:"女性",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/woman.png",
+      actionContent:""
+    },
+    {
+      iconText:"无痛测糖",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/yapei_new.png",
+      actionContent:""
+    },
+    {
+      iconText:"个人中心",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/center.png",
+      actionContent:""
+    },
+    {
+      iconText:"物流查询",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/logistics.png",
+      actionContent:""
+    },
+    {
+      iconText:"购物车",
+      imageName:"https://img.jianke.com/jk2016/mjianke/m/images/shoppingcar2017.png",
+      actionContent:""
+    }
+  ]);
+  //return ajax.getData('HomeNavBoxes', url, false);
 }
 
 export default {

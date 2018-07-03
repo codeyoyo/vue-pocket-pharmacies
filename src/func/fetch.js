@@ -32,9 +32,9 @@ const handleFetch = (apiUrl, params = '', showLoad = true) => {
 
   // 开始倒计时
   store.dispatch('startTimer');
-  // if (showLoad) {
-  //   load.show();
-  // }
+  if (showLoad) {
+    load.show();
+  }
   return window.fetch(request_url, option).then(checkStatus).catch(throwError);
 }
 
@@ -51,7 +51,7 @@ const checkStatus = (response) => {
     // 重置fetchCount
     store.dispatch('set_fetch_zero')
     // 关闭loader
-    //load.hide();
+    load.hide();
   }
   // 判断请求状态
   if (response.status >= 200 && response.status < 300) {

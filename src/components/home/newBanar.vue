@@ -35,8 +35,7 @@ export default {
   },
   watch: {},
   created() {
-    this.api.home.carousel().then(data => {
-      // if (data.code == "200") {
+    this.api.home.carousel().then(data => {      
       this.banarList = data;
       setTimeout(() => {
         var mySwiper = new Swiper("#swiper", {
@@ -47,9 +46,6 @@ export default {
           }
         });
       }, 300);
-      // } else {
-      //   Toast(data.message);
-      // }
     });
   }
 };

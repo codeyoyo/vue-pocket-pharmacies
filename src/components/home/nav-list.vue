@@ -20,12 +20,6 @@ export default {
   methods: {
     joinTo(obj) {
       return obj.actionContent;
-      // if(obj.actionType==10){
-      //   return obj.actionContent
-      // }
-      // if(obj.actionType==20){
-      //   return '#/productDetil/'+obj.productId+'/'+obj.merchantId
-      // }
     }
   },
   created() {
