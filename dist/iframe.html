@@ -41,7 +41,7 @@
 
 <body>
   <div class="box">
-    <iframe id='ifr' class="iframe" src="/index.html?type=1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"
+    <iframe id='ifr' class="iframe" src="./index.html?type=1" frameborder="no" border="0" marginwidth="0" marginheight="0" scrolling="no"
       allowtransparency="yes"></iframe>
   </div>
 </body>
@@ -51,11 +51,11 @@
   window.onload = function () {
     var clientWidth = document.documentElement.clientWidth;
     if (clientWidth < 900) {
-      window.location.href = "/index.html";
+      window.location.href = "./index.html";
     }
     window.onresize = function () {
       if (document.documentElement.clientWidth < 900) {
-        window.location.href = "/index.html";
+        window.location.href = "./index.html";
       }
     }
   }
