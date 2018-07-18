@@ -17,10 +17,10 @@
               </div>
           </div>
           <div class="floor-answer">
-              <!-- <div class="answer-row">
+              <div class="answer-row">
                   <span>问答</span>
                   <a v-text="item.answers"></a>
-              </div> -->
+              </div>
               <div class="answer-row">
                   <span>头条</span>
                   <a v-text="item.headline"></a>
@@ -58,7 +58,10 @@ export default {
      (background-color: #ffd3e4, color: #fc4468),
      (background-color: #baece0, color: #047e62),
      (background-color: #ede9bc, color: #887b09),
-     (background-color: #dacccc, color: #6c3c3c)
+     (background-color: #dacccc, color: #6c3c3c),
+     (background-color: #5484ec, color: #e9e2da),
+     (background-color: #8ceb4d, color: #504e4f),
+     (background-color: #e97a7a, color: #534945),
   );
   @for $i from 1 through length($stars) {
     $item: nth($stars, $i);

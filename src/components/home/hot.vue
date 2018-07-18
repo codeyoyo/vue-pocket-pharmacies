@@ -69,7 +69,7 @@ export default {
     font-size: pxToRem(40px);
     font-weight: bold;
     padding-bottom: pxToRem(10px);
-    border-bottom: pxToRem(3px) #eee solid;
+    border-bottom: 1px #eee solid;
     span {
       color: #b9e1f0;
       font-size: pxToRem(30px);

@@ -13,8 +13,8 @@ import 'mint-ui/lib/style.css';
 import "babel-polyfill";
 require('./sass/swiper-4.1.0.min.css');
 
-var fundebug = require("fundebug-javascript");
-fundebug.apikey = "c1fcf6048e66b37597f3d57e444b13933edc4ea64a19fa620e0aca1f6ffcfc8f";
+// var fundebug = require("fundebug-javascript");
+// fundebug.apikey = "c1fcf6048e66b37597f3d57e444b13933edc4ea64a19fa620e0aca1f6ffcfc8f";
 
 Vue.config.productionTip = false;
 Vue.use(MintUI);
@@ -43,15 +43,15 @@ function formatComponentName(vm) {
 
 }
 
-Vue.config.errorHandler = function (err, vm, info) {
-  var componentName = formatComponentName(vm);
-  var propsData = vm.$options && vm.$options.propsData;
+// Vue.config.errorHandler = function (err, vm, info) {
+//   var componentName = formatComponentName(vm);
+//   var propsData = vm.$options && vm.$options.propsData;
 
-  fundebug.notifyError(err, {
-    metaData: {
-      componentName: componentName,
-      propsData: propsData,
-      info: info
-    }
-  });
-};
+//   fundebug.notifyError(err, {
+//     metaData: {
+//       componentName: componentName,
+//       propsData: propsData,
+//       info: info
+//     }
+//   });
+// };

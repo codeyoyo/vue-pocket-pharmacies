@@ -31,14 +31,26 @@ const carousel = () => {
       merchantBasicId:0
     }
   ]);
-  //return ajax.getData('Carousel', url, false);
 }
 
 /**
  * 广告图
  */
 const advertising = () => {
-  return ajax.getData('Advertising', url, false);
+  return fakeRequest([
+    {
+      "imageUrl":"http://image.360kad.com/group2/M00/7F/EE/CgAgFFtIRI-Add80AAFpyZTmHDQ156.jpg",
+      "productId":0,
+      "merchantBasicId":0,
+      "advertisingType":20
+    },
+    {
+      "imageUrl":"http://image.360kad.com/group2/M00/7F/D7/CgAgFFtIDKmAefM0AACcv0LjqS0128.jpg",
+      "productId":0,
+      "merchantBasicId":0,
+      "advertisingType":20
+    }
+  ]);
 }
 
 /**
@@ -52,14 +64,96 @@ const features = () => {
  * 获取楼层信息
  */
 const floor = () => {
-  return ajax.getData('Floor', url, false);
+  let floorListData=[
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/37/4D/CgAgFVp5ZvGAQ8m-AADhmUUpDW8565.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/37/4D/CgAgFFp5Z1eAfbZzAACw75ukQ1Q939.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/37/4D/CgAgFFp5ZzWAO0cyAACxGn3d0Bg076.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/37/4D/CgAgFFp5ZwyAE3zvAADYdDr2jEA346.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/27/A1/CgAgFVpAnziAZmbPAAA5xP2tVdA264.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/27/A1/CgAgFFpAoAaAQ4GgAAA9QwbYS8M385.jpg"},
+    {"productId":0,"imgUrl":"http://image.360kad.com/group2/M00/27/A3/CgAgFFpAosOAP3a_AACpTK5PU_Y164.jpg"}
+  ];
+  let adList=[
+    {
+      "productId":0,
+      "imgUrl":"http://image.360kad.com/group1/M00/BB/13/CgAgEVmUAJ-AcVVyAABG8WzWeh0473.jpg"
+    },
+    {
+      "productId":0,
+      "imgUrl":"http://image.360kad.com/group2/M00/44/37/CgAgFVqxtASAJwxWAABCQMXdxjQ672.jpg"
+    }
+  ];
+  return fakeRequest([
+    {
+      name:"男科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },
+    {
+      name:"妇科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"皮肤科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"神经科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"呼吸科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"心脑科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"风湿科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    },{
+      name:"慢性科",
+      floorList:floorListData,
+      adList,
+      "answers":'让男人越来越虚的不良习惯，很多人全占了！',
+      "headline":"打响呼吸道感染预防保卫战"
+    }
+  ]);
 }
 
 /**
  * 获取热门推荐
  */
 const hotProduct = () => {
-  return ajax.getData('HotProduct', url, false);
+  return fakeRequest([{
+    "imageUrl":'http://image.360kad.com/group2/M00/81/13/CgAgFFtMcRKAIxJEAABu2JDWwYQ855.jpg',
+    "productId":0,
+    "merchantBasicId":0
+  },{
+    "imageUrl":'http://image.360kad.com/group2/M00/81/13/CgAgFFtMcS2ATbEwAADlpfLlUTE259.jpg',
+    "productId":0,
+    "merchantBasicId":0
+  },{
+    "imageUrl":'http://image.360kad.com/group2/M00/81/13/CgAgFVtMcUGAMw1tAADtG9y3aro119.jpg',
+    "productId":0,
+    "merchantBasicId":0
+  }]);
 }
 
 /**
@@ -73,7 +167,24 @@ const index = () => {
  * 猜你喜欢
  */
 const recomendProduct = (pageIndex) => {
-  return ajax.getData(`RecomendProduct?pageIndex=${pageIndex}&pageSize=20`, url, false);
+  let group=[];
+  var item={
+    "productId":0,
+    "merchantId":0,
+    "productName":"钙尔奇D 碳酸钙D3咀嚼片(Ⅱ)",
+    "productImg":"http://image.360kad.com/group1/M00/2D/2C/CgAgEFcqv_KAYUEMAAHCMrvkrK0605.jpg_180x180.jpg",
+    "productSpecifications":"300mg*30片",
+    "sellingPrice":"22.0",
+    "discountPrice":"28.0"
+  };
+  for(var i=0;i<30;i++){
+    group.push(item);
+  }
+  return fakeRequest({
+    "dataList":group,
+    "pageeIndex":1,
+    "pageCount":1,
+  });
 }
 
 /**
@@ -135,7 +246,6 @@ const spikeProduct = () => {
     message:""
   };
   return fakeRequest(data);
-  //return ajax.getData('SpikeProduct', url, false);
 }
 
 /**
@@ -206,7 +316,6 @@ const homeNavBoxes = () => {
       actionContent:""
     }
   ]);
-  //return ajax.getData('HomeNavBoxes', url, false);
 }
 
 export default {

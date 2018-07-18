@@ -4,7 +4,7 @@
         <a href="#/login">登录</a>
         <a href="#/register">注册</a>
         <a>用药问答</a>
-        <a>关于药居士</a>
+        <a>关于药道士</a>
     </div>
     <div class="footer-attestation">
         <span>正品保证</span>
@@ -13,7 +13,7 @@
         <span>货到付款</span>
     </div>
     <div class="footer-copyright">
-        copyright&nbsp;&nbsp;©2017-2018 药居士网上药店 版权所有
+        copyright&nbsp;&nbsp;©2017-2018 药道士网上药店 版权所有
     </div>
   </div>
 </template>
