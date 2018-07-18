@@ -102,7 +102,7 @@
   window.onresize = function () {
     if (clientWidth !== document.documentElement.clientWidth) {
       if (clientWidth > 1300 && !GetQueryString('type')) {
-        window.location.href = "/iframe.html";
+        window.location.href = "./iframe.html";
       } else {
         var hash = location.hash;
         window.location.reload();
