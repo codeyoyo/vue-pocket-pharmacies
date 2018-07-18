@@ -22,11 +22,11 @@ npm run build
 > vue2 + vuex + MintUI + vue-router + webpack + sass + ES6/7
 
 ## 效果演示
-[查看demo请戳这里](https://codeyoyo.github.io/seller-app/dist/) （请用chrome手机模式预览）
+[查看demo请戳这里](https://codeyoyo.github.io/vue-pocket-pharmacies/dist/) （请用chrome手机模式预览）
 
 ## 部分截图
-### 商品页
-<img width='300px' src="https://codeyoyo.github.io/seller-app/resource/01.jpg" />
+### 首页
+<img width='300px' src="https://codeyoyo.github.io/vue-pocket-pharmacies/renderings/home.png" />
 
 ## 项目BUG监控
 
