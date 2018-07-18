@@ -1,0 +1,96 @@
+<!DOCTYPE html><html><head><meta charset=utf-8><meta name=mobile-web-app-capable content=yes><meta name=format-detection content="telephone=no"><meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0" name=viewport><style type=text/css id=init_style></style><title>药道士移动版-中国最大的健康网上药房</title><script>function GetQueryString(name) {
+      var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)");
+      var r = window.location.search.substr(1).match(reg);
+      if (r != null) return unescape(r[2]);
+      return null;
+    }
+
+    var clientWidth = document.documentElement.clientWidth;
+    if (clientWidth > 1300 && !GetQueryString('type')) {
+      window.location.href = "/iframe.html";
+    }
+
+    (function (doc, win) {
+      var dpr, rem, scale;
+      var docEl = document.documentElement;
+      var metaEl = document.querySelector('meta[name="viewport"]');
+      var resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize';
+
+
+      /*isAndroid = navigator.userAgent.match(/(Android)/) ? true:false;
+      isIos = navigator.userAgent.match(/(iPad|iPhone)/) ? true:false;*/
+      if (navigator.userAgent.match(/(Android)/)) {
+        dpr = 1;
+      } else {
+        dpr = win.devicePixelRatio || 1;
+      }
+      scale = 1 / dpr;
+      // 设置viewport，进行缩放，达到高清效果
+      metaEl.setAttribute('content', 'width=device-width,initial-scale=' + scale + ',maximum-scale=' + scale +
+        ', minimum-scale=' + scale + ',user-scalable=no,shrink-to-fit=no');
+      // 设置data-dpr属性，留作的css hack之用
+      docEl.setAttribute('data-dpr', dpr);
+      var recalc = function () {
+        // if (docEl.style.fontSize) return;
+        clientWidth = docEl.clientWidth;
+        // console.log(clientWidth);
+        if (!clientWidth) return;
+        docEl.style.fontSize = clientWidth / 10 + 'px';
+        if (document.body) {
+          document.body.style.fontSize = docEl.style.fontSize;
+        }
+        if (dpr == 1) {
+          // 动态写入样式
+          var fontEl = document.getElementById('init_style');
+          var pxscale = clientWidth / 750;
+          docEl.firstElementChild.appendChild(fontEl);
+          fontEl.innerHTML = '.px-scale{transform:scale(' + pxscale + ') !important;-webkit-transform:scale(' +
+            pxscale + ') !important;}'; //雪碧图缩放
+        }
+      };
+      recalc();
+
+      // 给js调用的，某一dpr下rem和px之间的转换函数
+      window.rem2px = function (v) {
+        v = parseFloat(v);
+        return v * rem;
+      };
+      window.px2rem = function (v) {
+        v = parseFloat(v);
+        return v / rem;
+      };
+
+      window.dpr = dpr;
+      window.rem = rem;
+
+      if (!doc.addEventListener) return;
+      win.addEventListener(resizeEvt, recalc, false);
+      doc.addEventListener('DOMContentLoaded', recalc, false);
+
+    })(document, window);</script><link href=/static/css/app.cfc52acdd928f68383b8bd257bd38084.css rel=stylesheet></head><body><div id=app></div><script type=text/javascript src=/static/js/manifest.1c7693805dce4c7b1a0f.js></script><script type=text/javascript src=/static/js/vendor.4677ee171b70af932abe.js></script><script type=text/javascript src=/static/js/app.d0c1ae25a6d8702ed00f.js></script></body><script type=text/javascript>var _mtac = {};
+  (function () {
+    var mta = document.createElement("script");
+    mta.src = "http://pingjs.qq.com/h5/stats.js?v2.0.2";
+    mta.setAttribute("name", "MTAH5");
+    mta.setAttribute("sid", "500480125");
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(mta, s);
+  })();
+
+  window.onresize = function () {
+    if (clientWidth !== document.documentElement.clientWidth) {
+      if (clientWidth > 1300 && !GetQueryString('type')) {
+        window.location.href = "/iframe.html";
+      } else {
+        var hash = location.hash;
+        window.location.reload();
+      }
+    }
+  }
+
+  function imgError(image) {
+    // 隐藏图片 
+    image.style.display = 'none';
+    // 替换为默认图片 
+    // document.getElementById("img").setAttribute("src", "images/demo.png"); 
+  }</script></html>
